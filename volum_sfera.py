@@ -2,11 +2,17 @@
 Calcul volumul unei sfere
 """
 import math
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+from ipywidgets import interact, interactive, fixed
+import ipywidgets as widgets
 
 
 def calculeaza_volum_sfera(raza):
     volum = (4/3) * math.pi * raza ** 3
     return volum
+
 
 # Exemplu de utilizare
 raza = 5
@@ -15,11 +21,6 @@ print(f"Volumul sferei cu raza {raza} este: {volum}")
 
 # generare imagine 3D
 
-import numpy as np
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-from ipywidgets import interact, interactive, fixed
-import ipywidgets as widgets
 
 def plot_sphere(rotation_angle_x, rotation_angle_y, rotation_angle_z, scaling_factor):
     # Generează coordonatele punctelor pe sferă
@@ -53,10 +54,10 @@ def plot_sphere(rotation_angle_x, rotation_angle_y, rotation_angle_z, scaling_fa
     # Afișează sfera
     plt.show()
 
+
 # Creează interfața grafică interactivă
 interactive_plot = interactive(plot_sphere,
                                rotation_angle_x=widgets.IntSlider(min=0, max=360, step=1, value=10),
                                rotation_angle_y=widgets.IntSlider(min=0, max=360, step=1, value=10),
                                rotation_angle_z=widgets.IntSlider(min=0, max=360, step=1, value=10),
                                scaling_factor=widgets.FloatSlider(min=1, max=10, step=0.1, value=5))
-interactive_plot

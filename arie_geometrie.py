@@ -3,6 +3,7 @@ Calculul ariei unei forme geometrice depinde de tipul formei.
 """
 import math
 
+
 def calculeaza_aria(forma, **parametri):
     if forma == "patrat":
         latura = parametri.get("latura")

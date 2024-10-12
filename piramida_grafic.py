@@ -6,9 +6,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
+
 def calculeaza_volum_piramida(aria_bazei, inaltimea):
     volum = (1/3) * aria_bazei * inaltimea
     return volum
+
 
 def plot_piramide(aria_bazei, inaltimea):
     # Definirea vârfurilor piramidei
@@ -41,6 +43,7 @@ def plot_piramide(aria_bazei, inaltimea):
     ax.set_title('Piramida')
 
     plt.show()
+
 
 # Exemplu de utilizare
 aria_bazei = 25
